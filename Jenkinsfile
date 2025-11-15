@@ -1,8 +1,7 @@
 pipeline {
     agent any
 
-    // Example environment variables (for demo only).
-    // We are NOT really installing Chrome in this workshop.
+    // Example environment variables (demo only, not actually used for installs)
     environment {
         CHROME_VERSION       = 'YOUR_CHROME_VERSION_HERE'
         CHROMEDRIVER_VERSION = 'YOUR_CHROMEDRIVER_VERSION_HERE'
@@ -31,7 +30,7 @@ dotnet --info
         stage('Uninstall Current Chrome (demo only)') {
             steps {
                 bat '''
-echo [INFO] Demo step only – NOT uninstalling Chrome on this machine.
+echo [INFO] Demo step only - NOT uninstalling Chrome on this machine.
 '''
             }
         }
@@ -39,16 +38,16 @@ echo [INFO] Demo step only – NOT uninstalling Chrome on this machine.
         stage('Install Specific Version of Chrome (demo only)') {
             steps {
                 bat '''
-echo [INFO] Demo step only – NOT installing Chrome here.
+echo [INFO] Demo step only - NOT installing Chrome here.
 echo Would target Chrome version: %CHROME_VERSION%
 '''
             }
         }
 
-        stage('Download and Install ChromeDriver (demo only)) {
+        stage('Download and Install ChromeDriver (demo only)') {
             steps {
                 bat '''
-echo [INFO] Demo step only – NOT downloading ChromeDriver.
+echo [INFO] Demo step only - NOT downloading ChromeDriver.
 echo Would target ChromeDriver version: %CHROMEDRIVER_VERSION%
 echo Expected ChromeDriver path: %CHROMEDRIVER_PATH%
 '''
